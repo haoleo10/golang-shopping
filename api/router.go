@@ -32,7 +32,7 @@ type Databases struct {
 	orderedItemRepository *order.OrderedItemRepository
 }
 
-// 配置文件全局对象
+//配置文件全局对象
 var AppConfig = &config.Configuration{}
 
 // 根据配置文件创建数据库

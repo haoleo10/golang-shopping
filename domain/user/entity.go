@@ -16,7 +16,7 @@ type User struct {
 	IsAdmin   bool
 }
 
-// 新建用户实例
+//新建用户实例
 //调用它返回一个User实例
 func NewUser(username, password, password2 string) *User {
 

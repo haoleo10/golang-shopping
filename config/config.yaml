@@ -8,4 +8,4 @@ DatabaseSettings:
 
 
 JwtSettings:
-  SecretKey: "duoke360.com"
+  SecretKey: "haoruipeng"
