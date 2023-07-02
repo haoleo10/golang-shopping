@@ -14,6 +14,7 @@ func AuthAdminMiddleware(secretKey string) gin.HandlerFunc {
 			decodedClaims := jwtHelper.VerifyToken(c.GetHeader("Authorization"), secretKey)
 			if decodedClaims != nil && decodedClaims.IsAdmin {
 				c.Next()
+				//终止
 				c.Abort()
 				return
 			}
@@ -35,6 +36,7 @@ func AuthUserMiddleware(secretKey string) gin.HandlerFunc {
 		if c.GetHeader("Authorization") != "" {
 			decodedClaims := jwtHelper.VerifyToken(c.GetHeader("Authorization"), secretKey)
 			if decodedClaims != nil {
+				//下单的时候用户id中间件来设置的
 				c.Set("userId", decodedClaims.UserId)
 				c.Next()
 				c.Abort()

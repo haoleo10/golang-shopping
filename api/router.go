@@ -21,7 +21,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// Databases 结构体
+// Databases 结构体，关联了所有的数据仓库
 type Databases struct {
 	categoryRepository    *category.Repository
 	userRepository        *user.Repository
@@ -35,7 +35,9 @@ type Databases struct {
 //配置文件全局对象
 var AppConfig = &config.Configuration{}
 
-// 根据配置文件创建数据库
+// 根据配置文件创建数据库,根据配置文件读取所有配置
+// 路由调用的时候首先需要数据仓库，数据仓库需要db
+//
 func CreateDBs() *Databases {
 	cfgFile := "./config/config.yaml"
 	conf, err := config.GetAllConfigValues(cfgFile)
@@ -46,7 +48,9 @@ func CreateDBs() *Databases {
 	if err != nil {
 		log.Fatalf("读取配置文件失败. %v", err.Error())
 	}
+	//new一个db
 	db := database_handler.NewMySQLDB(AppConfig.DatabaseSettings.DatabaseURI)
+	//分别调用新建数据仓库
 	return &Databases{
 		categoryRepository:    category.NewCategoryRepository(db),
 		cartRepository:        cart.NewCartRepository(db),
@@ -58,7 +62,7 @@ func CreateDBs() *Databases {
 	}
 }
 
-// 注册所有控制器
+// 注册所有控制器，控制器需要service
 func RegisterHandlers(r *gin.Engine) {
 
 	dbs := *CreateDBs()
@@ -69,11 +73,12 @@ func RegisterHandlers(r *gin.Engine) {
 	RegisterOrderHandlers(r, dbs)
 }
 
-// 注册分类控制器
+// 注册分类控制器，引擎闯过来，db传过来
 func RegisterCategoryHandlers(r *gin.Engine, dbs Databases) {
 	categoryService := category.NewCategoryService(*dbs.categoryRepository)
 	categoryController := categoryApi.NewCategoryController(categoryService)
 	categoryGroup := r.Group("/category")
+	//中间件权限验证
 	categoryGroup.POST(
 		"", middleware.AuthAdminMiddleware(AppConfig.JwtSettings.SecretKey), categoryController.CreateCategory)
 	categoryGroup.GET("", categoryController.GetCategories)
@@ -84,6 +89,7 @@ func RegisterCategoryHandlers(r *gin.Engine, dbs Databases) {
 
 // 注册用户控制器
 func RegisterUserHandlers(r *gin.Engine, dbs Databases) {
+	//新建service，新建controller
 	userService := user.NewUserService(*dbs.userRepository)
 	userController := userApi.NewUserController(userService, AppConfig)
 	userGroup := r.Group("/user")
