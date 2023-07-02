@@ -1,7 +1,7 @@
 package product
 
 import (
-	"shopping/domain/category"
+	"shoppinggolang/domain/category"
 
 	"gorm.io/gorm"
 )

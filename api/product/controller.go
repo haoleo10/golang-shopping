@@ -2,9 +2,9 @@ package product
 
 import (
 	"net/http"
-	"shopping/domain/product"
-	"shopping/utils/api_helper"
-	"shopping/utils/pagination"
+	"shoppinggolang/domain/product"
+	"shoppinggolang/utils/api_helper"
+	"shoppinggolang/utils/pagination"
 
 	"github.com/gin-gonic/gin"
 )

@@ -2,7 +2,7 @@ package cart
 
 import (
 	"errors"
-	"shopping/domain/product"
+	"shoppinggolang/domain/product"
 )
 
 type Service struct {

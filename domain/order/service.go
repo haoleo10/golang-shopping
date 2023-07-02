@@ -1,9 +1,9 @@
 package order
 
 import (
-	"shopping/domain/cart"
-	"shopping/domain/product"
-	"shopping/utils/pagination"
+	"shoppinggolang/domain/cart"
+	"shoppinggolang/domain/product"
+	"shoppinggolang/utils/pagination"
 	"time"
 )
 

@@ -2,8 +2,8 @@ package cart
 
 import (
 	"net/http"
-	"shopping/domain/cart"
-	"shopping/utils/api_helper"
+	"shoppinggolang/domain/cart"
+	"shoppinggolang/utils/api_helper"
 
 	"github.com/gin-gonic/gin"
 )

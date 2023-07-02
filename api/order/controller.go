@@ -2,9 +2,9 @@ package order
 
 import (
 	"net/http"
-	"shopping/domain/order"
-	"shopping/utils/api_helper"
-	"shopping/utils/pagination"
+	"shoppinggolang/domain/order"
+	"shoppinggolang/utils/api_helper"
+	"shoppinggolang/utils/pagination"
 
 	"github.com/gin-gonic/gin"
 )

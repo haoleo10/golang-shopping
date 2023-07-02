@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"shopping/api"
-	"shopping/utils/graceful"
+	"shoppinggolang/api"
+	"shoppinggolang/utils/graceful"
 
 	"time"
 
-	_ "shopping/docs"
+	_ "shoppinggolang/docs"
 
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"

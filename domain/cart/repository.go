@@ -3,7 +3,7 @@ package cart
 import (
 	"errors"
 	"log"
-	"shopping/domain/user"
+	"shoppinggolang/domain/user"
 
 	"gorm.io/gorm"
 )

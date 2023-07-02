@@ -1,8 +1,8 @@
 package order
 
 import (
-	"shopping/domain/product"
-	"shopping/domain/user"
+	"shoppinggolang/domain/product"
+	"shoppinggolang/domain/user"
 
 	"gorm.io/gorm"
 )

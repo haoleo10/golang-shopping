@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"net/http"
-	jwtHelper "shopping/utils/jwt"
+	jwtHelper "shoppinggolang/utils/jwt"
 
 	"github.com/gin-gonic/gin"
 )

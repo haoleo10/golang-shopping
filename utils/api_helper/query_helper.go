@@ -1,7 +1,7 @@
 package api_helper
 
 import (
-	"shopping/utils/pagination"
+	"shoppinggolang/utils/pagination"
 
 	"github.com/gin-gonic/gin"
 )

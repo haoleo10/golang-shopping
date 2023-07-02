@@ -3,10 +3,10 @@ package user
 import (
 	"net/http"
 	"os"
-	"shopping/config"
-	"shopping/domain/user"
-	"shopping/utils/api_helper"
-	jwtHelper "shopping/utils/jwt"
+	"shoppinggolang/config"
+	"shoppinggolang/domain/user"
+	"shoppinggolang/utils/api_helper"
+	jwtHelper "shoppinggolang/utils/jwt"
 	"strconv"
 	"time"
 

@@ -3,9 +3,9 @@ package category
 import (
 	"fmt"
 	"net/http"
-	"shopping/domain/category"
-	"shopping/utils/api_helper"
-	"shopping/utils/pagination"
+	"shoppinggolang/domain/category"
+	"shoppinggolang/utils/api_helper"
+	"shoppinggolang/utils/pagination"
 
 	"github.com/gin-gonic/gin"
 )

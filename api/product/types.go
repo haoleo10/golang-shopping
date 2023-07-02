@@ -1,6 +1,6 @@
 package product
 
-import "shopping/domain/product"
+import "shoppinggolang/domain/product"
 
 // 创建商品请求参数
 type CreateProductRequest struct {

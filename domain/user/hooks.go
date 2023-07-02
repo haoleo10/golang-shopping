@@ -1,7 +1,7 @@
 package user
 
 import (
-	"shopping/utils/hash"
+	"shoppinggolang/utils/hash"
 
 	"gorm.io/gorm"
 )

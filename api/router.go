@@ -2,21 +2,21 @@ package api
 
 import (
 	"log"
-	cartApi "shopping/api/cart"
-	categoryApi "shopping/api/category"
-	orderApi "shopping/api/order"
-	productApi "shopping/api/product"
-	userApi "shopping/api/user"
-	"shopping/config"
-	"shopping/utils/middleware"
+	cartApi "shoppinggolang/api/cart"
+	categoryApi "shoppinggolang/api/category"
+	orderApi "shoppinggolang/api/order"
+	productApi "shoppinggolang/api/product"
+	userApi "shoppinggolang/api/user"
+	"shoppinggolang/config"
+	"shoppinggolang/utils/middleware"
 
-	"shopping/domain/cart"
-	"shopping/domain/order"
-	"shopping/domain/product"
+	"shoppinggolang/domain/cart"
+	"shoppinggolang/domain/order"
+	"shoppinggolang/domain/product"
 
-	"shopping/domain/category"
-	"shopping/domain/user"
-	"shopping/utils/database_handler"
+	"shoppinggolang/domain/category"
+	"shoppinggolang/domain/user"
+	"shoppinggolang/utils/database_handler"
 
 	"github.com/gin-gonic/gin"
 )

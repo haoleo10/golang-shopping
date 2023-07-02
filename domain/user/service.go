@@ -1,6 +1,6 @@
 package user
 
-import "shopping/utils/hash"
+import "shoppinggolang/utils/hash"
 
 // 用户service结构体
 type Service struct {

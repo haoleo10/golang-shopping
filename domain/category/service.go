@@ -2,8 +2,8 @@ package category
 
 import (
 	"mime/multipart"
-	"shopping/utils/csv_helper"
-	"shopping/utils/pagination"
+	"shoppinggolang/utils/csv_helper"
+	"shoppinggolang/utils/pagination"
 )
 
 type Service struct {
